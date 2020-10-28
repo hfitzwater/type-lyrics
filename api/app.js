@@ -12,7 +12,7 @@ var searchRouter = require('./routes/search');
 var app = express();
 
 app.use(cors({
-  origin: 'http://localhost',
+  origin: process.env.HOST || 'http://localhost',
   optionsSuccessStatus: 200
 }));
 
