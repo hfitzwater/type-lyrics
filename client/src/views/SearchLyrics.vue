@@ -6,8 +6,11 @@
         placeholder="Search for lyrics"
         @input="updateQuery">
       </cv-search>
+      <span style="font-size:small">
+        Powered by <a href="https://genius.com/">Genius</a>
+      </span>
 
-      <br>
+      <br><br>
 
       <span>
         <cv-button>Search</cv-button>
