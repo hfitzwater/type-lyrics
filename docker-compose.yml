@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  api:
+    container_name: type-lyrics-api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: type-lyrics-api:latest
+    env_file: ./api/.env
+    ports:
+        - 3000:3000
+
+  client:
+    container_name: type-lyrics-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: type-lyrics-client:latest
+    ports:
+        - 80:80
