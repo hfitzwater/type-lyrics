@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const defaultPort = 3000;
-const defaultHost = 'localhost';
 const defaultProtocol = 'http';
-const baseURL = `${defaultProtocol}://${defaultHost}:${defaultPort}/`;
+const defaultHost = process.env.API_HOST || `${defaultProtocol}://localhost`;
+const defaultPort = process.env.API_PORT || 3000;
+const baseURL = `${defaultHost}:${defaultPort}/`;
 
 const client = axios.create({
   baseURL

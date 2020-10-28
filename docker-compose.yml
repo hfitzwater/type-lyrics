@@ -17,5 +17,6 @@ services:
       context: ./client
       dockerfile: Dockerfile
     image: type-lyrics-client:latest
+    env_file: ./client/.env
     ports:
         - 80:80
