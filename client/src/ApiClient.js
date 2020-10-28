@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const defaultProtocol = 'http';
-const defaultHost = process.env.API_HOST || `${defaultProtocol}://localhost`;
-const defaultPort = process.env.API_PORT || 3000;
+const defaultHost = process.env.VUE_APP_API_HOST || `${defaultProtocol}://localhost`;
+const defaultPort = process.env.VUE_APP_API_PORT || 3000;
 const baseURL = `${defaultHost}:${defaultPort}/`;
 
 const client = axios.create({
